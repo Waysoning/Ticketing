@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Development
+kind: Deployment
 metadata:
   name: auth-depl
 spec:
@@ -11,10 +11,10 @@ spec:
     metadata:
       labels:
         app: auth
-      spec:
-        containers:
-          - name: auth
-            image: waysoning/auth
+    spec:
+      containers:
+        - name: auth
+          image: waysoning/auth
 ---
 apiVersion: v1
 kind: Service
@@ -26,6 +26,6 @@ spec:
   type: ClusterIP # default
   ports: 
     - name: auth
-      protocal: TCP
+      protocol: TCP
       port: 3000
       targetPort: 3000
