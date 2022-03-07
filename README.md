@@ -18,3 +18,5 @@
   for Auth to validate the email
 - `npm install express-async-errors`
   deal with async errors in services
+- `npm install mongoose`
+  for MongoDB
