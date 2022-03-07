@@ -11,3 +11,10 @@
 - K8s Setup
 - add skaffold `skaffold dev`
 - Ingress-Nginx Setup
+
+## Library
+
+- `npm install express-validator`
+  for Auth to validate the email
+- `npm install express-async-errors`
+  deal with async errors in services
