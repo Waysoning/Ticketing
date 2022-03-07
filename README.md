@@ -20,3 +20,5 @@
   deal with async errors in services
 - `npm install mongoose`
   for MongoDB
+- `npm install @types/mongoose`
+  mongoose for typescript
