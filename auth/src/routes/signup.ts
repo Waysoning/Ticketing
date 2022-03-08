@@ -48,12 +48,16 @@ router.post(
     await user.save();
 
     // Generate JWT
+    // if (!process.env.JWT_KEY) {
+    //   throw new Error('JWT_KEY must be defined');
+    // }
     const userJwt = jwt.sign(
       {
         id: user.id,
         email: user.email,
       },
-      'asf'
+      // ! to discard check
+      process.env.JWT_KEY!
     );
 
     // Store it on session object

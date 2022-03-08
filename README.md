@@ -26,3 +26,5 @@
   add session support
 - `npm install jsonwebtoken @types/jsonwebtoken`
   add JWT support
+- `kubectl create secret generic jwt-secret --from-literal=JWT_KEY=********`
+  envi variable
