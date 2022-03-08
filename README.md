@@ -23,3 +23,6 @@
 - `npm install @types/mongoose`
   mongoose for typescript
 - `npm install cookie-session @types/cookie-session`
+  add session support
+- `npm install jsonwebtoken @types/jsonwebtoken`
+  add JWT support
