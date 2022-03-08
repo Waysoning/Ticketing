@@ -22,3 +22,4 @@
   for MongoDB
 - `npm install @types/mongoose`
   mongoose for typescript
+- `npm install cookie-session @types/cookie-session`
