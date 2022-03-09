@@ -28,3 +28,5 @@
   add JWT support
 - `kubectl create secret generic jwt-secret --from-literal=JWT_KEY=********`
   envi variable
+- `npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server`
+  dependencies for test
