@@ -6,12 +6,6 @@
 - `npm install typescript ts-node-dev express @types/express`
 - `tsc --init`
 
-## Dev
-
-- K8s Setup
-- add skaffold `skaffold dev`
-- Ingress-Nginx Setup
-
 ## Library
 
 - `npm install express-validator`
@@ -30,3 +24,14 @@
   envi variable
 - `npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server`
   dependencies for test
+
+## Dev
+
+- K8s Setup
+- add skaffold `skaffold dev`
+- Ingress-Nginx Setup
+
+## Client
+
+- `npm init -y`
+- `npm install react react-dom next`
