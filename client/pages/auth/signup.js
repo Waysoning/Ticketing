@@ -1,5 +1,5 @@
-import { useReducer, useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
+import Router from 'next/router';
 import useRequest from '../../hooks/use-request';
 
 const signup = () => {
@@ -11,6 +11,9 @@ const signup = () => {
     body: {
       email,
       password,
+    },
+    onSuccess: () => {
+      Router.push('/');
     },
   });
 
@@ -29,7 +32,7 @@ const signup = () => {
     //   setErrors(error.response.data.errors);
     // }
 
-    doRequest();
+    await doRequest();
   };
 
   return (
