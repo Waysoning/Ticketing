@@ -36,3 +36,4 @@
 - `npm init -y`
 - `npm install react react-dom next`
 - `npm install bootstrap`
+- `npm install axios`
