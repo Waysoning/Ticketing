@@ -37,3 +37,9 @@
 - `npm install react react-dom next`
 - `npm install bootstrap`
 - `npm install axios`
+
+## Common
+
+- `npm publish --access public`
+- `npm install typescript del-cli --save-dev`
+- `npm install express express-validator cookie-session jsonwebtoken @types/cookie-session @types/express @types/jsonwebtoken`
