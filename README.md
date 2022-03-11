@@ -37,3 +37,8 @@
 - `npm install react react-dom next`
 - `npm install bootstrap`
 - `npm install axios`
+
+## Common
+
+- `npm publish --access public`
+- `npm install typescript del-cli --save-dev`
