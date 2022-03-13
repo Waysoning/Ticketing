@@ -43,3 +43,7 @@
 - `npm publish --access public`
 - `npm install typescript del-cli --save-dev`
 - `npm install express express-validator cookie-session jsonwebtoken @types/cookie-session @types/express @types/jsonwebtoken`
+
+## Tips
+
+- Your connection is not private. Type `thisisunsage` to ignore.
