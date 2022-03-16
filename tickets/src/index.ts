@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-
 import { app } from './app';
+import { natsWrapper } from './nats-wrapper';
 
 // latest node can use await out of the async
 const start = async () => {
@@ -11,6 +11,7 @@ const start = async () => {
     throw new Error('MONGO_URI must be defined');
   }
   try {
+    await natsWrapper.connect('ticketing', 'egerg', 'http://nats-srv:4222');
     await mongoose.connect(process.env.MONGO_URI);
   } catch (error) {
     console.log(error);
