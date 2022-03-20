@@ -6,7 +6,7 @@ import {
   requireAuth,
   NotAuthorizedError,
 } from '@wayson-ticketing/common';
-import { Ticket } from '../models/tickets';
+import { Ticket } from '../models/ticket';
 import { TicketUpdatedPublisher } from '../events/publishers/ticket-updated-publisher';
 import { natsWrapper } from '../nats-wrapper';
 
