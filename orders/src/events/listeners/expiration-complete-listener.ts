@@ -8,6 +8,7 @@ import { Message } from 'node-nats-streaming';
 import { queueGroupName } from './queue-group-name';
 import { Order } from '../../models/order';
 import { OrderCancelledPublisher } from '../publishers/order-cancelled-publisher';
+import { idText } from 'typescript';
 
 export class ExpirationCompleteListener extends Listener<ExpirationCompleteEvent> {
   queueGroupName = queueGroupName;
@@ -18,6 +19,10 @@ export class ExpirationCompleteListener extends Listener<ExpirationCompleteEvent
 
     if (!order) {
       throw new Error('Order not found');
+    }
+
+    if (order.status === OrderStatus.Complete) {
+      return msg.ack();
     }
 
     order.set({
