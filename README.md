@@ -1,63 +1,37 @@
 # Ticketing
 
-## Service Init
+## Technology
 
-- `npm init -y`
-- `npm install typescript ts-node-dev express @types/express`
-- `tsc --init`
+- React and Next JS are used to present content to users.
+- Node and Express are used to created services.
+- Mongo database and Redis are used to store data for services.
+- The entire app is deployed and runs in Docker containers executed in a Kubernetes cluster.
 
-## Library
+## Structure
 
-- `npm install express-validator`
-  for Auth to validate the email
-- `npm install express-async-errors`
-  deal with async errors in services
-- `npm install mongoose`
-  for MongoDB
-- `npm install @types/mongoose`
-  mongoose for typescript
-- `npm install cookie-session @types/cookie-session`
-  add session support
-- `npm install jsonwebtoken @types/jsonwebtoken`
-  add JWT support
-- `kubectl create secret generic jwt-secret --from-literal=JWT_KEY=********`
-  envi variable
-- `npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server`
-  dependencies for test
+<img width="1012" alt="image" src="https://user-images.githubusercontent.com/38137877/161216514-144d847b-086e-4f9c-97bf-bfc56c39d5d8.png">
 
-## Dev
+## Setup environment
 
-- K8s Setup
-- add skaffold `skaffold dev`
-- Ingress-Nginx Setup
+- Install [Node.js](https://nodejs.org/en/)
+- Install [Docker](https://docs.docker.com/get-docker/)
+- Enable Kubernetes in Docker
+- Install [skaffold](https://skaffold.dev/docs/install/#standalone-binary)
 
-## Client
-
-- `npm init -y`
-- `npm install react react-dom next`
-- `npm install bootstrap`
-- `npm install axios`
-
-## Common
-
-- `npm publish --access public`
-- `npm install typescript del-cli --save-dev`
-- `npm install express express-validator cookie-session jsonwebtoken @types/cookie-session @types/express @types/jsonwebtoken`
-- `npm run pub` to publish it to the npm repo
-
-## Tips
-
-- Your connection is not private. Type `thisisunsage` to ignore.
-
-## NATS Streaming Service
-
-- `kubectl port-forward nats-depl-7bb844d5f6-kn46r 4222:4222`
-- `kubectl port-forward nats-depl-7bb844d5f6-kn46r 8222:8222`
-- `localhost:8222/streaming`
 
 ## Secrets
-
+secrets that should be added to the kubernetes
 - JWT
   `kubectl create secret generic jwt-secret --from-literal=JWT_KEY=********`
 - Stripe
   `kubectl create secret generic stripe-secret --from-literal=STRIPE_KEY=********`
+
+## Start
+
+- open the hosts file and insert `127.0.0.1 ticketing.dev`
+- `skaffold dev`
+- open `ticketing.dev` in the browser
+
+## Tips
+
+- Your connection is not private. Type `thisisunsage` to ignore.
